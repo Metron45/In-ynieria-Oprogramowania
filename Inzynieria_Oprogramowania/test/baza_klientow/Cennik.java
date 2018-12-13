@@ -1,3 +1,5 @@
+package baza_klientow;
+
 public class Cennik {
 
 	private int cena;
@@ -33,8 +35,8 @@ public class Cennik {
 	 * @param kara
 	 */
 	public void update_Cenniki(int cena, int kara) {
-		// TODO - implement Cennik.update_Cenniki
-		throw new UnsupportedOperationException();
+		setCena(cena);
+                setKara(kara);
 	}
 
 }
