@@ -33,7 +33,7 @@ public class Katalog_Kaset {
             int index;
             String tytul_kasety = " ";
             for( index = 0; !tytul_kasety.equals(tytul) && index < kasety.size(); ++index){
-                tytul_kasety = kasety.get(index).getTytul(); 
+                 
             }
             if(tytul.equals(tytul_kasety)){
                index --;
