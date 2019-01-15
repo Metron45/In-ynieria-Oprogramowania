@@ -4,9 +4,15 @@ import baza_klientow.Wypozyczenie;
 import baza_klientow.Klient;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.IllegalFormatCodePointException;
 
 public class Fabryka {
 
+    
+        public Fabryka(){
+            
+        }
+    
 	/**
 	 * 
 	 * @param Wypozyczenie_id
@@ -31,11 +37,16 @@ public class Fabryka {
          * @param id
 	 */
 	public Kaseta stworz_kasete(String tytul, int id) {
+            if(id < 0){
+                throw new IllegalFormatCodePointException(0);
+            }
+            else {
 		Kaseta kaseta = new Kaseta();
-                kaseta.setIlosc_kaset(1);
+                kaseta.changeIlosc_kaset(1);
                 kaseta.setKaseta_Id(id);
                 kaseta.setTytul(tytul);
                 return kaseta;
+            }
 	}
 
 	/**
@@ -50,10 +61,6 @@ public class Fabryka {
                 klient.setTelefon(telefon);
                 klient.setNumer_iden(id);
                 return klient;
-	}
-
-	public Fabryka() {
-
 	}
 
 }

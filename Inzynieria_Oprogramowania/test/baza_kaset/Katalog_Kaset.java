@@ -27,13 +27,13 @@ public class Katalog_Kaset {
 	/**
 	 * 
 	 * @param tytul
-         * @return numer_id
+         * @return index
 	 */
 	public int findKaseta(String tytul) {
             int index;
             String tytul_kasety = " ";
             for( index = 0; !tytul_kasety.equals(tytul) && index < kasety.size(); ++index){
-                 
+                 tytul_kasety = kasety.get(index).tytul;
             }
             if(tytul.equals(tytul_kasety)){
                index --;
@@ -55,7 +55,7 @@ public class Katalog_Kaset {
 	 */
 	public int updateKaseta(String tytul, int zmiana) {  
             int id = findKaseta(tytul);
-            int ilosc = kasety.get(id).setIlosc_kaset(zmiana);
+            int ilosc = kasety.get(id).changeIlosc_kaset(zmiana);
             return ilosc;
 	}
 

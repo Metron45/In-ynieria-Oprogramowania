@@ -11,6 +11,10 @@
 public class Main {
     public static void main(String[] args) {
         
+                 FabrykaTest test = new FabrykaTest();
+                 test.testStworz_kasete();
+                 
+                 /*
                  Aplikacja app = new Aplikacja();
 		 System.out.println("Przykładowe zastosowanie metod Przypadkow uzycia:");
                  
@@ -91,5 +95,6 @@ public class Main {
                      + " Kaseta Id: " + app.getKatalogKaset().kasety.get(i).getKaseta_Id()
                      + " Ilosc: " + app.getKatalogKaset().kasety.get(i).getIlosc_kaset() );
                  }
+                */
 	}
 }

@@ -1,11 +1,30 @@
 package baza_kaset;
 
+import java.util.IllegalFormatCodePointException;
+
 public class Kaseta {
 
-	private String tytul;
-	private int kaseta_Id;
-	private int ilosc_kaset;
+	public String tytul;
+	public int kaseta_Id;
+	public int ilosc_kaset;
 
+        
+        public Kaseta(){
+            
+        }
+        
+        public Kaseta(String Tytul, int id){
+            tytul = Tytul;
+            kaseta_Id = id;
+            ilosc_kaset = 1;
+        }
+        
+        public Kaseta(String Tytul, int id, int ilosc){
+            tytul = Tytul;
+            kaseta_Id = id;
+            ilosc_kaset = ilosc;
+        }
+        
 	public String getTytul() {
 		return tytul;
 	}
@@ -16,6 +35,7 @@ public class Kaseta {
 	 */
 	public void setTytul(String Tytul) {
 		tytul = Tytul;
+
 	}
 
 	public int getKaseta_Id() {
@@ -39,9 +59,14 @@ public class Kaseta {
 	 * @param zmiana
      * @return 
 	 */
-	public int setIlosc_kaset(int zmiana) {
-		ilosc_kaset += zmiana;
+	public int changeIlosc_kaset(int zmiana) {
+            if(zmiana < 9999 && zmiana > -9999){
+               ilosc_kaset += zmiana;
                 return ilosc_kaset;
+            }
+            else{
+                 throw new IllegalFormatCodePointException(0);
+            }
 	}
 
 }

@@ -5,6 +5,14 @@ public class Cennik {
 	private int cena;
 	private int kara;
 
+        public Cennik(int cena, int kara) {
+		this.cena = cena;
+                this.kara = kara;
+	}
+        
+        public Cennik(){
+        }
+        
 	public int getCena() {
 		return this.cena;
 	}

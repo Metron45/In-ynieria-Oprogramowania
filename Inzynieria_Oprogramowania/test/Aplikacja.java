@@ -88,7 +88,7 @@ public class Aplikacja {
 	 */
 	public void usun_kasete(String tytul) {
             int id = katalog_kaset.findKaseta(tytul);
-            if(katalog_kaset.kasety.get(id).getIlosc_kaset() == 0){
+            if(katalog_kaset.kasety.get(id).getIlosc_kaset() == 1){
 		katalog_kaset.usun_Kaseta(tytul);
                 System.out.println("Kaseta Usunieta, Kara :"
                         + cennik.getKara());
